@@ -14,7 +14,7 @@ const [value, setValue] = useState('');
   return (
 
     <>
-      <main className="pt-20 flex items-center justify-center mt-20 bg-yellow-300">
+      <main className="pt-20 flex items-center justify-center mt-20 bg-[#CCCCCC]">
         <WelcomePage />
       </main>
       <footer>

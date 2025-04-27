@@ -1,0 +1,16 @@
+"use client";
+import {TextInputProps} from "@/app/components/TextInput/TextInput.props";
+import React from "react";
+
+export const TextInput:React.FC<TextInputProps> = (
+  {className,isValidate,value,setValue,placeholder,error,isHidden,isDisabled}
+) => {
+
+
+
+
+  return <div className={"flex flex-col"}>
+    <input   disabled={isDisabled} onChange={(e) => setValue(e.target.value)} value={value} placeholder={placeholder} className={`bg-[#FBFCFF] text-md rounded-sm p-[14px] focus-visible:outline-brand focus-visible:outline-2 ${isValidate ? "outline-2 outline-accent" : ""} ${error ? "outline-2 outline-error" : ""}  ${className}`} type={isHidden ? "password" : "text"} />
+    {error && <span className="text-error">{error}</span>}
+  </div>;
+};
